@@ -54,7 +54,7 @@ open class NativePlatformPublishSnapshot(uploadTasks: List<String>, buildAndTest
         uploadTasks.forEach { task ->
             gradle {
                 name = "Gradle $task"
-                tasks = "clean $task $buildScanInit -Psnapshot -PonlyPrimaryVariants -PbintrayUserName=%ARTIFACTORY_USERNAME% -PbintrayApiKey=%ARTIFACTORY_PASSWORD%"
+                tasks = "clean $task $buildScanInit -Psnapshot -PbintrayUserName=%ARTIFACTORY_USERNAME% -PbintrayApiKey=%ARTIFACTORY_PASSWORD%"
                 buildFile = ""
             }
         }
